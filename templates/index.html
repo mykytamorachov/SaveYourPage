@@ -29,6 +29,7 @@
                             {% endfor %}
                         </select>
                     </div>
+
                     <button type="submit">+</button>
                 </form>
 
@@ -55,12 +56,39 @@
                     <li data-filter="art">Art</li>
                 </ol>
             </div>
-            <div id="archive">Archive</div>
-            <div id="profile">Profile</div>
+            <div id="archive">Categories
+            </div>
+
+
+            <a href="#settings_div"><div id="profile">Settings</div></a>
             <div id="space" ></div>
 
-            <div id="gopro">Go Pro</div>
+            <div id="gopro">Donate
+            </div>
         </nav>
+        <div id="settings_div">
+            <div id="settings_header"><strong>folder</strong> editor</div>
+            <div>
+                <button>add a folder</button>
+                <button id='rename' disabled>rename</button>
+                <button id="delete" disabled>delete</button>
+                <button id='sign_out'>sign out</button>
+            </div>
+
+            {% for cat in categories %}
+            <div>
+                <input type="checkbox" class="radio" name="category" id="{{ cat.id }}" value="{{ cat.name }}">
+                <label for='{{ cat.id }}'>{{ cat.name }} </label></br>
+            </div>
+            {% endfor %}
+
+
+        <div class="arrow">&#0123;</div>
+{#        <a id='save' href="/">#}
+            <button id='savechanges'>save changes</button>
+{#        </a>#}
+{#            <div id='dim_backgorund'></div>#}
+        </div>
 
         <br/>
 
@@ -145,7 +173,50 @@
                     // Capture scroll event.
                     $(window).bind('scroll',onScroll);
                 });
+                $('input[type="checkbox"]').click(function(){
+                    if ($('input[type="checkbox"]:checked').length==1){
+                        $('#rename').removeAttr('disabled');
+                        $('#delete').removeAttr('disabled');
+                    }
+                    else if (($('input[type="checkbox"]:checked').length>1)){
+                        $('#delete').removeAttr('disabled');
+                        $('#rename').attr('disabled','disabled');
+                    }
+                    else{
+                        $('#rename').attr('disabled','disabled');
+                        $('#delete').attr('disabled','disabled');
+                    }
+                })
+                $('#delete').click(function(){
+                    var values = $('input:checkbox:checked').map(function () {
+                      return this.id;
+                    }).get()
+
+                    for (var i= 0; i<values.length; i++)
+                    {
+                        $('#'+values[i]).parent('div').remove()
+                        $.ajax({
+                          url: '/delete_category',
+                          data: 'id='+values[i],
+                          success: function(){console.log('deleted')},
+                          type: 'get'
+                        });
+
+                    }
+
+                })
+                $('#savechanges').click(function(){
+                    console.log(window.location.href)
+                    $('#settings_div').fadeOut()
+                        window.location.href.replace(window.location.hash, '');
+                        window.location.href = window.location.href
+                    });
+
+
             })(jQuery);
+
+
+
         </script>
     </body>
 </html>

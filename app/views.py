@@ -180,11 +180,11 @@ def addCategory(request):
 
 @api_view(['GET', 'POST'])
 def deleteCategory(request):
-    if request.method == 'POST':
-        category_id = request.POST.get('id')
+    if request.method == 'GET':
+        category_id = request.GET.get('id')
         category = Category.objects.get(pk=category_id)
         category.delete()
-        return redirect('home')
+        return Response(status=200)
     else:
         return Response(status=403)
 

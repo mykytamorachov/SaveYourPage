@@ -1,6 +1,12 @@
 html{
     font-family:"Open Sans Condensed";
 }
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: #000000;
+}
 header{
     height: 86px;
     width: 100%;
@@ -261,4 +267,136 @@ nav div{
 }
 #filters{
     display: none;
+}
+
+#settings_div{
+    width: 93%;
+    /*border-bottom: 1px solid darkblue;*/
+    height: 395px;
+    display: inline-block;
+    position: fixed;
+    z-index: 10;
+    top:-450px;
+    left: 100px;
+    padding: 20px 20px 20px 20px;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+#settings_header{
+    margin:20px;
+    font-size: 1.4em;
+}
+#settings_div button{
+    border: none;
+    background-color: #464950;
+    color: #ffffff;
+    padding: 15px;
+    margin: 15px 5px;
+    height: 50px;
+}
+
+#sign_out{
+    float:right;
+    padding: 10px 35px !important;
+    position: relative;
+    right: 4%;
+}
+@font-face{
+      font-family: 'WebSymbolsLigaRegular';
+          src: url('websymbolsligaregular.eot');
+          src: url('websymbolsligaregular.eot?#iefix') format('embedded-opentype'),
+               url('websymbolsligaregular.woff') format('woff'),
+               url('websymbolsligaregular.ttf') format('truetype'),
+               url('websymbolsligaregular.svg#WebSymbolsRegular') format('svg');
+
+}
+.radio{
+    display: none;
+}
+.radio:checked ~ label{
+    background-color: red;
+
+}
+.arrow{
+    font: 5em 'WebSymbolsLigaRegular';
+    display: inline-block;
+    -webkit-transform:  rotate(-90deg);
+    -moz-transform:  rotate(-90deg);
+    overflow: hidden;
+    position: fixed;
+    left:84px;
+    z-index: 11;
+    border: none;
+    color: #38828D;
+}
+
+#savechanges{
+    position: relative;
+    display: inline-block;
+    top:100px;
+    margin-left: 0;
+}
+
+
+
+#settings_div:after{
+    background-color: red;
+}
+
+#dim_backgorund{
+    display: block;
+    opacity: 0.3;
+    z-index: 10;
+    width: 94%;
+    height: 100%;
+    background-color: #000000;
+    top:521px;
+    left:100px;
+
+    position: fixed;
+}
+
+#settings_div button:disabled{
+    opacity: 0.1;
+}
+
+@keyframes settings_open
+{
+    0%   {top:-450px}
+    100% {top: 86px;}
+}
+
+@-webkit-keyframes settings_open /* Safari and Chrome */
+{
+    0%   {top:-450px}
+    100% {top: 86px;}
+}
+
+@keyframes settings_close
+{
+    0%   {top:86px}
+    100% {top: -450px;}
+}
+
+@-webkit-keyframes settings_close /* Safari and Chrome */
+{
+    0%   {top:86px}
+    100% {top: -450px;}
+}
+
+#settings_div:target{
+    animation: settings_open 0.5s;
+    -webkit-animation: settings_open 0.5s; /* Safari and Chrome */
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+}
+
+.close{
+    animation: settings_close 0.5s;
+    -webkit-animation: settings_close 0.5s; /* Safari and Chrome */
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
 }
