@@ -1,8 +1,9 @@
 {% load staticfiles %}
+{% load  filters %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>SaveYourPage</title>
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
@@ -30,10 +31,12 @@
                         </select>
                     </div>
 
-                    <button type="submit">+</button>
+                    <button type="submit"></button>
                 </form>
 
-            <div id="logo"><strong>save</strong> your page</div>
+            <div id="logo">
+{#                <strong>save</strong> your page#}
+            </div>
             <div id="search">
 
                 <input type="text" value="Search...">
@@ -43,27 +46,18 @@
             </div>
         </header>
         <nav>
-            <div id="folders">Folders
-                <ol id="filters">
-                    <li data-filter="amsterdam">Amsterdam</li>
-                    <li data-filter="tokyo">Tokyo</li>
-                    <li data-filter="london">London</li>
-                    <li data-filter="paris">Paris</li>
-                    <li data-filter="berlin">Berlin</li>
-                    <li data-filter="sport">Sport</li>
-                    <li data-filter="fashion">Fashion</li>
-                    <li data-filter="video">Video</li>
-                    <li data-filter="art">Art</li>
-                </ol>
-            </div>
-            <div id="archive">Categories
-            </div>
+
+            <a href=""><div id="archive">Categories
+            </div></a>
 
 
-            <a href="#settings_div"><div id="profile">Settings</div></a>
+            <a href=""><div id="profile">Settings</div></a>
+            <div id="folders">About Us</div>
             <div id="space" ></div>
 
             <div id="gopro">Donate
+            </div>
+            <div style="width:100%; height: 100%; background-color: #464950;">
             </div>
         </nav>
         <div id="settings_div">
@@ -77,18 +71,32 @@
 
             {% for cat in categories %}
             <div>
-                <input type="checkbox" class="radio" name="category" id="{{ cat.id }}" value="{{ cat.name }}">
+            <input type="checkbox" class="radio" name="category" id="{{ cat.id }}" value="{{ cat.name }}">
                 <label for='{{ cat.id }}'>{{ cat.name }} </label></br>
+
             </div>
             {% endfor %}
 
 
         <div class="arrow">&#0123;</div>
-{#        <a id='save' href="/">#}
+        <a id='save' href="/">
             <button id='savechanges'>save changes</button>
-{#        </a>#}
+        </a>
 {#            <div id='dim_backgorund'></div>#}
         </div>
+
+        <div id="categories_div">
+            <div id="category_items">
+            <div class="item" id="all">all </div>
+            {% for cat in categories %}
+                <div class="item" data-filter="{{ cat.name}}">{{ cat.name }}</div>
+            {% endfor %}
+              </div>
+
+
+{#            <div id="categories_arrow">&#0123;</div>#}
+        </div>
+        <div id="page-cover"></div>
 
         <br/>
 
@@ -100,15 +108,15 @@
                   are used for filtering. The classes match the "data-filter" properties above.
                   -->
                 {% for page in pages %}
-                <li data-filter-class='["london", "art"]' id="{{ page.page_id }}">
+                <li data-filter-class='["{{ page.category }}"]' id="{{ page.page_id }}">
                 <div class="image">
                     <img src="{% static 'images/'%}{{ user_id }}/{{ page.image }}" width="300">
                 </div>
                     <p class="title">{{ page.title }}</p>
                     <p>{{ page.category }}</p>
                     <div class="controls">
-                        <div></div>
-                        <div></div>
+                        <a target="_blank" href="{{ page.url }}"><div class='link'></div></a>
+                        <div class="remove"></div>
                     </div>
                 </li>
                 {% endfor %}
@@ -143,7 +151,7 @@
 
                     // Get a reference to your grid items.
                     var handler = $('#tiles li'),
-                            filters = $('#filters li');
+                            filters = $('#category_items div');
 
                     // Call the layout function.
                     handler.wookmark(options);
@@ -152,6 +160,11 @@
                      * When a filter is clicked, toggle it's active state and refresh.
                      */
                     var onClickFilter = function(event) {
+                        $("#page-cover").css("opacity",0).fadeIn(300, function () {
+                             if($('#categories_div').css('top')=='86px'){
+                                $('#categories_div').css({'top': '-450px','z-index':9999});
+                             }
+                         }).css({'display':'none'});
                         var item = $(event.currentTarget),
                                 activeFilters = [];
 
@@ -164,14 +177,13 @@
                         if (item.hasClass('active')) {
                             activeFilters.push(item.data('filter'));
                         }
-
+                        console.log(activeFilters)
                         handler.wookmarkInstance.filter(activeFilters);
                     }
 
                     // Capture filter click events.
                     filters.click(onClickFilter);
                     // Capture scroll event.
-                    $(window).bind('scroll',onScroll);
                 });
                 $('input[type="checkbox"]').click(function(){
                     if ($('input[type="checkbox"]:checked').length==1){
@@ -205,16 +217,66 @@
                     }
 
                 })
-                $('#savechanges').click(function(){
-                    console.log(window.location.href)
-                    $('#settings_div').fadeOut()
-                        window.location.href.replace(window.location.hash, '');
-                        window.location.href = window.location.href
-                    });
-
-
             })(jQuery);
+            $(window).load(function(e){
+              $('#archive').on('click',function(e){
+                 $("#page-cover").css("opacity",0.6).fadeIn(300, function () {
+                    $('#categories_div').css({'top': '86px','z-index':9999});
+                 });
+               e.preventDefault();
+               });
 
+                $('#profile').on('click',function(e){
+                 $("#page-cover").css("opacity",0.6).fadeIn(300, function () {
+                    $('#settings_div').css({'top': '86px','z-index':9999});
+                 });
+               e.preventDefault();
+               });
+
+
+              $('#page-cover').on('click',function(e){
+                 $("#page-cover").css("opacity",0).fadeIn(300, function () {
+                     if($('#categories_div').css('top')=='86px'){
+                        $('#categories_div').css({'top': '-450px','z-index':9999});
+                     }
+                     if($('#settings_div').css('top')=='86px'){
+                        $('#settings_div').css({'top': '-450px','z-index':9999});
+                     }
+                 }).css({'display':'none'});
+               e.preventDefault();
+               });
+            });
+
+            $('#all').click(function(){
+            })
+
+            $('#url input').focus(function() {
+              $( this ).val( "" );
+            });
+
+            $('#url input').focusout(function() {
+                console.log($('#url input').text())
+              if($('#url input[type=text]').val() == ""){
+                $( this ).val( "Paste your link here..." );
+              }
+            });
+
+            $('#tiles .remove').click(function(){
+                element = $(this.parentNode.parentNode)
+                console.log(element.attr('id'))
+                element.remove()
+                $.ajax({
+                    method:'GET',
+                    url:"/delete_page/",
+                    data:"id="+element.attr('id')
+                })
+            })
+
+            $('#tiles li').click(function(){
+                element = $(this)
+                url = element.children('.controls').children('a').attr('href')
+                window.open(url,'_blank');
+            })
 
 
         </script>

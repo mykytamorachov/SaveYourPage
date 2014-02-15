@@ -5,16 +5,17 @@
     <ignored path="SaveYourPage.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390746761936" ignored="false" />
-    <file path="/settings.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390928237517" ignored="false" />
-    <file path="/index.html" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391095597100" ignored="false" />
-    <file path="/style.css" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391250781163" ignored="false" />
-    <file path="/urls.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391089066835" ignored="false" />
-    <file path="/views.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391089245707" ignored="false" />
+    <file path="/settings.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1392233007729" ignored="false" />
+    <file path="/index.html" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391948873574" ignored="false" />
+    <file path="/style.css" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391948844944" ignored="false" />
+    <file path="/urls.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391894362687" ignored="false" />
+    <file path="/views.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391885874620" ignored="false" />
     <file path="/models.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390928069915" ignored="false" />
     <file path="/decorators.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390905641044" ignored="false" />
-    <file path="/login.html" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390905855885" ignored="false" />
+    <file path="/login.html" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391937572599" ignored="false" />
     <file path="/main.css" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390919206313" ignored="false" />
     <file path="/webkit2png.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1390922293490" ignored="false" />
+    <file path="/filters.py" changelist="9454d914-a470-4a2c-822b-dd9465137a44" time="1391885531566" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +35,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="80" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.54">
+            <state line="53" column="36" selection-start="2031" selection-end="2031" vertical-scroll-proportion="-12.666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.wookmark.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/jquery.wookmark.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SaveYourPage/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="13" selection-start="789" selection-end="789" vertical-scroll-proportion="0.6509946">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templatetags/filters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="29" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -46,7 +74,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="390" column="32" selection-start="7952" selection-end="7960" vertical-scroll-proportion="-7.509804">
+            <state line="262" column="29" selection-start="5792" selection-end="5792" vertical-scroll-proportion="-4.8">
               <folding />
             </state>
           </provider>
@@ -55,10 +83,17 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SaveYourPage/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state line="13" column="38" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="38" selection-start="1211" selection-end="1211" vertical-scroll-proportion="-14.375">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,10 +101,8 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="33" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#15#50#0" expanded="true" />
-              </folding>
+            <state line="222" column="35" selection-start="7121" selection-end="7121" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,15 +119,17 @@
       <list>
         <option value="$PROJECT_DIR$/static/css/reset.css" />
         <option value="$PROJECT_DIR$/app/decorators.py" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/static/webkit2png.py" />
-        <option value="$PROJECT_DIR$/SaveYourPage/settings.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/filters.py" />
+        <option value="$PROJECT_DIR$/app/templatetags/filters.py" />
         <option value="$PROJECT_DIR$/SaveYourPage/urls.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/SaveYourPage/settings.py" />
       </list>
     </option>
   </component>
@@ -128,7 +163,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -189,7 +223,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,12 +251,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveYourPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SaveYourPage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="SaveYourPage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,13 +300,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/sample-images" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/static/sample-images" />
       <recent name="$PROJECT_DIR$/static/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templatetags" />
       <recent name="$PROJECT_DIR$/static/css" />
     </key>
   </component>
@@ -341,6 +395,13 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
@@ -394,11 +455,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19727403" sideWeight="0.7239583" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20301291" sideWeight="0.7244389" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27604166" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2755611" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -470,114 +531,103 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/images/1/TheDjangotemplatelanguageForPythonprogrammersDjangodocumentationDjango.png">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/static/sample-images/find-02.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sample-images/logo.svg">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/1/PatternsforFlaskmdashFlask0101documentation.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/1/Google.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/webkit2png.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="38" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Wookmark-jQuery-master/example-filter/only-filter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="126.25" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templatetags/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="29" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaveYourPage/settings.py">
+    <entry file="file://$PROJECT_DIR$/static/sample-images/donate.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
+    <entry file="file://$PROJECT_DIR$/static/sample-images/yen.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#15#43#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms.py">
+    <entry file="file://$PROJECT_DIR$/static/sample-images/coin.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/static/sample-images/link.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="29" selection-start="1705" selection-end="1705" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/websymbolsligaregular.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/websymbolsligaregular.ttf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/websymbolsligaregular.woff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="33" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#15#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="19" selection-start="907" selection-end="907" vertical-scroll-proportion="-2.5363457">
+        <state line="222" column="35" selection-start="7121" selection-end="7121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SaveYourPage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
+        <state line="13" column="38" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="390" column="32" selection-start="7952" selection-end="7960" vertical-scroll-proportion="-7.509804">
+        <state line="23" column="38" selection-start="1211" selection-end="1211" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sample-images/info.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.wookmark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="80" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.54">
+        <state line="53" column="36" selection-start="2031" selection-end="2031" vertical-scroll-proportion="-12.666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="262" column="29" selection-start="5792" selection-end="5792" vertical-scroll-proportion="-4.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveYourPage/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="789" selection-end="789" vertical-scroll-proportion="0.6509946">
           <folding />
         </state>
       </provider>

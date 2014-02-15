@@ -49,6 +49,7 @@ class Main(TemplateView):
         context = super(Main, self).get_context_data(**kwargs)
         cats = Category.objects.all()
         categories = {}
+        category = []
         pages = {}
         cc = []
         pp=[]
@@ -65,13 +66,14 @@ class Main(TemplateView):
         for row in pages:
             pp.append(pages[row])
         for cat in cats:
+            category.append(cat.name)
             categories.update({cat.id:{
                 'id': cat.id,
                 'name': cat.name}})
         for row in categories:
             cc.append(categories[row])
         print
-        context.update({'categories': cc,'pages':pp, 'user_id':self.request.user.id})
+        context.update({'cats':category,'categories': cc,'pages':pp, 'user_id':self.request.user.id})
         return context
 
 
@@ -216,3 +218,6 @@ def deletePage(request):
         page_id = request.GET.get('id')
         page = Page.objects.get(pk=page_id)
         page.delete()
+        return redirect('home')
+    else:
+        return Response(status=403)

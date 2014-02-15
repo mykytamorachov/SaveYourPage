@@ -29,6 +29,10 @@ header input{
 }
 
 header #logo{
+    background-image: url("/static/sample-images/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 450px auto;
     text-align: center;
     font-size: 2em;
     width: 62%;
@@ -63,6 +67,10 @@ header button{
 }
 
 #url button{
+    background-image: url("/static/sample-images/add-01.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50px 50px;
     background-color: #BDEFF6;
     font-size: 10em;
     padding: 0;
@@ -71,7 +79,7 @@ header button{
 
 }
 #search_button{
-    background-image: url("/static/sample-images/spotlight.png");
+    background-image: url("/static/sample-images/find-02.svg");
     background-color: #464950;
     background-repeat: no-repeat;
     background-position: 15px 15px;
@@ -142,7 +150,8 @@ nav{
     width: 100px;
     position: fixed;
     text-align: center;
-    top:86px;
+    top:89px;
+    overflow: hidden;
 }
 
 nav div{
@@ -155,14 +164,14 @@ nav div{
 
 @keyframes navigation
 {
-    0%   {line-height: 100px;background-position: 100px 15px;}
-    100% {line-height: 150px;background-position: 30px 15px;}
+    0%   {line-height: 150px;background-position: 30px 15px; background-size: 40px 40px}
+    100% {line-height: 300px;background-position: 10px 10px; background-size: 80px 80px}
 }
 
 @-webkit-keyframes navigation /* Safari and Chrome */
 {
-    0%   {line-height: 100px;background-position: 100px 15px;}
-    100% {line-height: 150px;background-position: 30px 15px;}
+    0%   {line-height: 150px;background-position: 30px 15px; background-size: 40px 40px}
+    100% {line-height: 300px;background-position: 10px 10px; background-size: 80px 80px}
 }
 
 @keyframes search
@@ -190,12 +199,15 @@ nav div{
 }
 
 #folders{
-    background-image: url("/static/sample-images/star.png") !important;
+    background-image: url("/static/sample-images/info.svg") !important;
     background-color: #51BFCE;
+    background-color: #38828D;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    background-position: 100px 15px;
-    line-height: 100px;
+    background-position: 30px 15px;
+    line-height: 150px;
+    color: #fff;
+    overflow: hidden;
 }
 
 
@@ -216,12 +228,15 @@ nav div{
 }
 
 #archive{
-    background-image: url("/static/sample-images/star.png") !important;
-    background-color: #439BA9;
+    background-image: url("/static/sample-images/categories-04.svg") !important;
+    background-color: #51BFCE;
+    /*background-color: #439BA9;*/
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    background-position: 100px 15px;
-    line-height: 100px;
+    overflow: hidden;
+    color: #fff;
+    background-position: 30px 15px;
+    line-height: 150px;
 }
 
 #search:hover{
@@ -245,25 +260,30 @@ nav div{
 }
 
 #profile{
-    background-color: #38828D;
-    background-image: url("/static/sample-images/star.png") !important;
+    background-color: #439BA9;
+    background-image: url("/static/sample-images/settings-05.svg") !important;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    background-position: 100px 15px;
-    line-height: 100px;
+    color: #fff;
+    background-position: 30px 15px;
+    line-height: 150px;
+    overflow: hidden;
 }
 
 #gopro{
     background-color: #C09626;
-    background-image: url("/static/sample-images/star.png") !important;
+    background-image: url("/static/sample-images/coin.svg") !important;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    background-position: 100px 15px;
-    line-height: 100px;
+    color: #fff;
+    background-position: 30px 15px;
+    line-height: 150px;
+    overflow: hidden;
 }
 
 #space{
     height: 30%;
+    overflow: hidden;
 }
 #filters{
     display: none;
@@ -282,6 +302,7 @@ nav div{
     text-transform: uppercase;
     background-color: #fff;
 }
+
 
 #settings_header{
     margin:20px;
@@ -329,6 +350,7 @@ nav div{
     z-index: 11;
     border: none;
     color: #38828D;
+
 }
 
 #savechanges{
@@ -336,6 +358,19 @@ nav div{
     display: inline-block;
     top:100px;
     margin-left: 0;
+}
+
+#categories_div{
+    width: 93%;
+    height: 395px;
+    display: inline-block;
+    position: fixed;
+    z-index: 10;
+    top:-450px;
+    left: 100px;
+    padding: 20px 20px 20px 20px;
+    text-transform: uppercase;
+    background-color: #fff;
 }
 
 
@@ -373,17 +408,6 @@ nav div{
     100% {top: 86px;}
 }
 
-@keyframes settings_close
-{
-    0%   {top:86px}
-    100% {top: -450px;}
-}
-
-@-webkit-keyframes settings_close /* Safari and Chrome */
-{
-    0%   {top:86px}
-    100% {top: -450px;}
-}
 
 #settings_div:target{
     animation: settings_open 0.5s;
@@ -393,10 +417,75 @@ nav div{
     -moz-animation-fill-mode:forwards;
 }
 
+/*#categories_div:target{*/
+    /*animation: settings_open 0.5s;*/
+    /*-webkit-animation: settings_open 0.5s; *//* Safari and Chrome */
+    /*animation-fill-mode:forwards;*/
+    /*-webkit-animation-fill-mode:forwards;*/
+    /*-moz-animation-fill-mode:forwards;*/
+/*}*/
+
 .close{
     animation: settings_close 0.5s;
     -webkit-animation: settings_close 0.5s; /* Safari and Chrome */
     animation-fill-mode:forwards;
     -webkit-animation-fill-mode:forwards;
     -moz-animation-fill-mode:forwards;
+}
+
+#category_items{
+    height: 100%;
+    width: 97%;
+}
+
+.item{
+    font-size: 2em;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.item:hover{
+    background-color: #464950;
+    color:#fff;
+    cursor: pointer;
+}
+
+#categories_arrow{
+    font: 5em 'WebSymbolsLigaRegular';
+    display: inline-block;
+    -webkit-transform:  rotate(-90deg);
+    -moz-transform:  rotate(-90deg);
+    overflow: hidden;
+    position: fixed;
+    left:84px;
+    z-index: 11;
+    border: none;
+    color: #439BA9;
+    top:200px;
+}
+
+#page-cover {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+.link{
+    background-image: url("/static/sample-images/link.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+}
+.remove{
+    background-image: url("/static/sample-images/remove.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
 }

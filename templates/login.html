@@ -19,29 +19,23 @@
     </head>
     <body>
 		<div class="wrapper">
-			<h1>Save Your Page</h1>
-			<h2>Leave here interesting pages <span>not to forget</span> to read them later</h2>
 			<div class="content">
 				<div id="form_wrapper" class="form_wrapper">
-					<form class="login active" action="/log_in/" method="post">{% csrf_token %}
+					<form class="login" action="/log_in/" method="post">{% csrf_token %}
 						{% for message in messages %}
                             <span class="error">{{ message }}</span>
                         {% endfor %}
-                        <h3>Login</h3>
 						<div>
-							<label>Username:</label>
 							{{ form.username }}
 							<span class="error">{{ error }}</span>
 						</div>
 						<div>
-							<label>Password: <a href="/forgot_password/" rel="forgot_password" class="forgot linkform">Forgot your password?</a></label>
 							{{ form.password }}
 							<span class="error">{{ error }}</span>
 						</div>
 						<div class="bottom">
-							<div class="remember"><input type="checkbox" /><span>Keep me logged in</span></div>
 							<input type="submit" value="Login">
-							<a href="register.html" rel="register" class="linkform">You don't have an account yet? Register here</a>
+							<input type="button" value="singup">
 							<div class="clear"></div>
 						</div>
 					</form>

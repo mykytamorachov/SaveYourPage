@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'app',
     'rest_framework',
+    'app.templatetags'
 )
 
 MIDDLEWARE_CLASSES = (
